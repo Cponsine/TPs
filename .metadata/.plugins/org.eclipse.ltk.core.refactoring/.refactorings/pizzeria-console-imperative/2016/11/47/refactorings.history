@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy source folder &apos;src&apos; to &apos;pizzeria-console-objet&apos;&#x0D;&#x0A;- Original project: &apos;pizzeria-console-imperative&apos;&#x0D;&#x0A;- Destination element: &apos;pizzeria-console-objet&apos;&#x0D;&#x0A;- Original element: &apos;pizzeria-console-imperative/src&apos;" description="Copy source folder" destination="=pizzeria-console-objet" element1="/src" flags="6" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyRoots" roots="1" stamp="1479902084758" version="1.0"/>
+</session>
