@@ -1,0 +1,110 @@
+package fr.pizzeria.dao;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import fr.pizzeria.Exception.SavePizzaException;
+import fr.pizzeria.model.Pizza;
+
+public class PizzaDaoArray implements PizzaDao {
+
+	private List <Pizza> pizzas = new ArrayList<>(Arrays.asList(
+			new Pizza(0, "PEP", "Peperoni", 12.50),
+			new Pizza(1, "MAR", "Margherita", 14.00),
+			new Pizza(2, "REI", "Reine", 11.50),
+			new Pizza(3, "FRO", "4 fromages", 12.00),
+			new Pizza(4, "CAN", "Cannibale", 12.50),
+			new Pizza(5, "SAV", "Savoyarde", 13.00),
+			new Pizza(6, "ORI", "Orientale", 13.50),
+			new Pizza(7, "IND", "Indienne", 14.00)
+	));
+
+	@Override
+	public List<Pizza> findAllPizzas() {
+		return pizzas;
+	}
+
+	@Override
+	public boolean saveNewPizza(Pizza pizza) throws SavePizzaException {
+/*
+		Pizza[] newMenu = new Pizza[pizzas.length + 1];
+
+		for (int i = 0; i < pizzas.length; ++i) {
+			newMenu[i] = new Pizza();
+			newMenu[i].setId(pizzas[i].getId());
+			newMenu[i].setCode(pizzas[i].getCode());
+			newMenu[i].setNom(pizzas[i].getNom());
+			newMenu[i].setPrix(pizzas[i].getPrix());
+		}
+
+		newMenu[pizzas.length] = new Pizza();
+		newMenu[pizzas.length].setId(pizza.getId());
+		newMenu[pizzas.length].setCode(pizza.getCode());
+		newMenu[pizzas.length].setNom(pizza.getNom());
+		newMenu[pizzas.length].setPrix(pizza.getPrix());
+
+		pizzas = newMenu;
+		Pizza.nbPizzas++;
+		return true;
+		*/
+		pizzas.add(pizza);
+		Pizza.nbPizzas++;
+		return true;
+	}
+
+	@Override
+	public boolean updatePizza(String codePizza, Pizza pizza) {
+		return false;
+	}
+
+	@Override
+	public boolean deletePizza(String codePizza) {
+/*
+		Pizza[] newMenu = new Pizza[pizzas.length - 1];
+
+		for (int i = 0; i < pizzas.length - 1; i++) {
+
+			if (!codePizza.equals(pizzas[i].getCode())) {
+				newMenu[i] = new Pizza();
+				newMenu[i].setId(pizzas[i].getId());
+				newMenu[i].setCode(pizzas[i].getCode());
+				newMenu[i].setNom(pizzas[i].getNom());
+				newMenu[i].setPrix(pizzas[i].getPrix());
+			}
+		}
+*/
+	//	pizzas = newMenu;
+		Optional <Pizza>oPizza = getPizzaIdFromCode(codePizza);
+		oPizza.ifPresent(p -> {
+			pizzas.remove(p);
+			Pizza.nbPizzas--;
+		});
+		
+		return true;
+	}
+
+	@Override
+	public Optional<Pizza> getPizzaIdFromCode(String codePizza) {
+
+		Optional<Pizza> oPizza = pizzas.stream()
+				.filter(p -> p.getCode().equals(codePizza))
+				.findAny();
+		return oPizza;
+		/*
+		for (int i = 0; i < this.pizzas.length; ++i) {
+			if (this.pizzas[i].getCode().equals(codePizza)) {
+				return this.pizzas[i].getId();
+			}
+		}
+		return -1;
+		*/
+	}
+
+	@Override
+	public boolean isCodeExist(String code) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+}

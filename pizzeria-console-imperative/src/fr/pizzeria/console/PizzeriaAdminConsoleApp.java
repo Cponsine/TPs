@@ -23,12 +23,12 @@ public class PizzeriaAdminConsoleApp {
 		boolean go=true;
 		while(go)
 		{
-			System.out.print("*****Pizzeria Administration*****\n "
+			System.out.print("*****Pizzeria Administration*****\n"
 				+ "1. Lister les pizzas\n"
-				+ "2. Ajouter une nouvelle pizza\n "
+				+ "2. Ajouter une nouvelle pizza\n"
 				+ "3. Mettre à jour une pizza\n"
 				+ "4. Supprimer une pizza\n"
-				+ "99. Sortir2\n");
+				+ "99. Sortir\n");
 			
 			Scanner s = new Scanner(System.in);
 			choix = s.nextInt();

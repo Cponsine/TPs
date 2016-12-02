@@ -1,0 +1,8 @@
+package fr.pizzeria.model;
+
+import java.util.Enumeration;
+
+public class CategoriePizza {
+
+	Enumeration<String>
+}

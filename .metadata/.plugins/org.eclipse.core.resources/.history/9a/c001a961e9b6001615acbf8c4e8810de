@@ -1,0 +1,23 @@
+package devinstitut.abstractfactory.service;
+
+import devinstitut.abstractfactory.service.client.ClientService;
+import devinstitut.abstractfactory.service.commande.CommandeService;
+import devinstitut.abstractfactory.service.pizza.PizzaService;
+
+public class MySQLFactory extends AbstractFactory {
+	private ClientService cls;
+	private CommandeService cos;
+	private PizzaService ps;
+
+	public ClientService getClientService() {
+	    return this.cls ;
+	  }
+
+	  public CommandeService getCommandeService() {
+	    return this.cos;
+	  }
+
+	  public PizzaService getPizzaService() {
+	    return this.ps;
+	  }
+}

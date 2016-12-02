@@ -1,0 +1,15 @@
+package fr.pizzeria.model;
+
+public enum CategoriePizza {
+	VIANDE("Viande"), POISSON("Poisson"),SANS_VIANDE("Sans viande");
+	
+	private String categ;
+
+	public String getCateg() {
+		return categ;
+	}	
+	private CategoriePizza(String categ){
+		this.categ=categ;
+	}
+
+}

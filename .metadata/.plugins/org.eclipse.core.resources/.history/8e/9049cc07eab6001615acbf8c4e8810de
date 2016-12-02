@@ -1,0 +1,5 @@
+package devinstitut.abstractfactory.service;
+
+public class PostgresFactory extends AbstractFactory {
+
+}

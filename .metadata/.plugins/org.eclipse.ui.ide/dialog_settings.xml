@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\ETY4\Documents\Java\TPs\pizzeria-console-correct"/>
+		<item value="C:\Users\ETY4\Documents\Java\TPs\pizzeria-console-objet\src\fr\pizzeria\model"/>
+	</list>
 	<list key="installedFeatures">
 		<item value="com.ianbrandt.tools.m2e.mdp.feature:0.0.4.201409291703"/>
 		<item value="org.aspectj:1.8.9.201607291758"/>
@@ -152,5 +156,12 @@
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.jdt.ui.java"/>
 		</list>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item value="525" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="580" key="DIALOG_HEIGHT"/>
+		<item value="223" key="DIALOG_X_ORIGIN"/>
+		<item value="78" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

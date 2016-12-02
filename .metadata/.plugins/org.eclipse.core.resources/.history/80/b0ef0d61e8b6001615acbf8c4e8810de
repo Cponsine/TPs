@@ -1,0 +1,6 @@
+package devinstitut.abstractfactory.service;
+
+
+public class MySQLFactory extends AbstractFactory {
+
+}
